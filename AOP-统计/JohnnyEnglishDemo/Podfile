@@ -1,0 +1,11 @@
+source 'https://github.com/EFEducationFirstMobile/CTXCocoaPodsRepository'
+source 'https://github.com/CocoaPods/Specs.git'
+
+
+
+
+platform :ios, '8.0'
+
+target 'JohnnyEnglishDemo' do
+	pod 'JohnnyEnglish', :path => '../'
+end

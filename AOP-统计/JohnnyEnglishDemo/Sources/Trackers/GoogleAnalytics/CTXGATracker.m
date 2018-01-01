@@ -1,0 +1,142 @@
+//
+//  CTXGATracker.m
+//  Pods
+//
+//  Created by Mario Araújo on 06/10/2014.
+//  Copyright (c) 2014 EF CTX. All rights reserved.
+//  Licensed under the MIT license.
+
+#import "CTXGATracker.h"
+
+#import <GoogleAnalytics/GAI.h>
+#import <GoogleAnalytics/GAIDictionaryBuilder.h>
+#import <GoogleAnalytics/GAIFields.h>
+#import "CTXUserActivityEvent.h"
+#import "CTXUserActivityTiming.h"
+#import "CTXUserActivityScreenHit.h"
+
+static NSUInteger const kTrackerDispatchIntervalDebug   = 10;
+static NSUInteger const kTrackerDispatchIntervalRelease = 120;
+
+@interface CTXGATracker()
+
+@property (nonatomic, strong) id<GAITracker> tracker;
+
+@end
+
+@implementation CTXGATracker
+
+- (instancetype)initWithTrackingId:(NSString *)trackingId
+{
+    if (self = [super init]) {
+        [[GAI sharedInstance] setTrackUncaughtExceptions:YES];
+        [[GAI sharedInstance] setDispatchInterval:kTrackerDispatchIntervalRelease];
+        
+        self.tracker = [[GAI sharedInstance] trackerWithTrackingId:trackingId];
+        
+        NSString *version = [[NSBundle mainBundle] objectForInfoDictionaryKey:(NSString *)kCFBundleVersionKey];
+        [self.tracker set:kGAIAppVersion value:version];
+    }
+    
+    return self;
+}
+
+- (void)setSampleRate:(CGFloat)sampleRate
+{
+    CGFloat value = sampleRate;
+    value = MIN(value, 1);
+    value = MAX(value, 0);
+    
+    _sampleRate = value;
+    
+    [self.tracker set:kGAISampleRate value:[@(value*100) stringValue]];
+}
+
+
+- (void)setDebugMode:(BOOL)value
+{
+    _debugMode = value;
+    
+    [[GAI sharedInstance] setDispatchInterval: value ? kTrackerDispatchIntervalDebug : kTrackerDispatchIntervalRelease];
+    [[GAI sharedInstance].logger setLogLevel:value ? kGAILogLevelVerbose : kGAILogLevelError];
+}
+
+#pragma mark - CTXUserActivityTrackerProtocol Methods
+
+- (void)trackUserId:(NSString *)userId
+{
+    [self.tracker set:@"&uid" value:userId];
+}
+
+- (void)trackScreenHit:(CTXUserActivityScreenHit *)screenHit
+{
+    NSParameterAssert(screenHit.screenName);
+    
+    GAIDictionaryBuilder *builder = [GAIDictionaryBuilder createScreenView];
+    [self configureBuilder:builder withUserActivity:screenHit];
+    
+    [self.tracker set:kGAIScreenName value:screenHit.screenName];
+    [self.tracker send:[builder build]];
+}
+
+- (void)trackEvent:(CTXUserActivityEvent *)event
+{
+    NSParameterAssert(event.category);
+    NSParameterAssert(event.action);
+    
+    GAIDictionaryBuilder *builder = [GAIDictionaryBuilder createEventWithCategory:event.category
+                                                                           action:event.action
+                                                                            label:event.label
+                                                                            value:event.value];
+    [self configureBuilder:builder withUserActivity:event];
+    [self.tracker send:[builder build]];
+}
+
+- (void)trackTiming:(CTXUserActivityTiming *)timing
+{
+    NSParameterAssert(timing.category);
+    NSParameterAssert(timing.interval);
+    
+    GAIDictionaryBuilder *builder = [GAIDictionaryBuilder createTimingWithCategory:timing.category
+                                                                          interval:@((int)([timing.interval floatValue]*1000))//sec to millisec
+                                                                              name:timing.name
+                                                                             label:timing.label];
+    [self configureBuilder:builder withUserActivity:timing];
+    [self.tracker send:[builder build]];
+}
+
+#pragma mark - Private
+
+- (void)configureBuilder:(GAIDictionaryBuilder *)builder withUserActivity:(CTXUserActivity *)userActivity
+{
+    switch (userActivity.sessionControl) {
+        case CTXSessionControlStart:
+        {
+            [builder set:@"start" forKey:kGAISessionControl];
+        } break;
+        case CTXSessionControlStop:
+        {
+            [builder set:@"stop" forKey:kGAISessionControl];
+        } break;
+        default:
+            break;
+    }
+    
+    [userActivity.customDimensions enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSString *obj, BOOL *stop) {
+		if ([key integerValue] != 0) {//Custom index begin from 1, and invalid convertion will return 0
+			[self.tracker set:[GAIFields customDimensionForIndex:[key integerValue]] value:obj];
+		} else {
+			NSLog(@"[CTXGATracker] Fail to track custom dimension with invalid index:%@ with value:%@", key, obj);
+		}
+    }];
+    
+    [userActivity.customMetrics enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSString *obj, BOOL *stop) {
+		if ([key integerValue] != 0) {//Custom index begin from 1, and invalid convertion will return 0
+			[self.tracker set:[GAIFields customMetricForIndex:[key integerValue]] value:obj];
+		} else {
+			NSLog(@"[CTXGATracker] Fail to track custom metric with invalid index:%@ with value:%@", key, obj);
+		}
+    }];
+}
+
+@end

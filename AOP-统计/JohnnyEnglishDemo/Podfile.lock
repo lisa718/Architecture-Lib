@@ -1,0 +1,22 @@
+PODS:
+  - Aspects (1.4.1)
+  - GoogleAnalytics (3.17.0)
+  - JohnnyEnglish (0.0.4):
+    - Aspects
+    - GoogleAnalytics
+
+DEPENDENCIES:
+  - JohnnyEnglish (from `../`)
+
+EXTERNAL SOURCES:
+  JohnnyEnglish:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
+  GoogleAnalytics: f42cc53a87a51fe94334821868d9c8481ff47a7b
+  JohnnyEnglish: cd87c24ace96d1f6cdf23e1d6093f79acb39c466
+
+PODFILE CHECKSUM: bfb3d335ddfebaa3120f8fe4a6779806a58f5903
+
+COCOAPODS: 1.2.1

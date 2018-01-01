@@ -1,0 +1,618 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		073B25C319B385800005F2FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073B25C219B385800005F2FC /* Foundation.framework */; };
+		073B25C519B385800005F2FC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073B25C419B385800005F2FC /* CoreGraphics.framework */; };
+		073B25C719B385800005F2FC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073B25C619B385800005F2FC /* UIKit.framework */; };
+		073B25CD19B385800005F2FC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 073B25CB19B385800005F2FC /* InfoPlist.strings */; };
+		073B25CF19B385800005F2FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 073B25CE19B385800005F2FC /* main.m */; };
+		073B25D319B385800005F2FC /* CTXAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 073B25D219B385800005F2FC /* CTXAppDelegate.m */; };
+		073B25D519B385800005F2FC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 073B25D419B385800005F2FC /* Images.xcassets */; };
+		073B25DC19B385800005F2FC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073B25DB19B385800005F2FC /* XCTest.framework */; };
+		073B25DD19B385800005F2FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073B25C219B385800005F2FC /* Foundation.framework */; };
+		073B25DE19B385800005F2FC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073B25C619B385800005F2FC /* UIKit.framework */; };
+		073B25E619B385800005F2FC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 073B25E419B385800005F2FC /* InfoPlist.strings */; };
+		073B25E819B385800005F2FC /* JohnnyEnglishDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 073B25E719B385800005F2FC /* JohnnyEnglishDemoTests.m */; };
+		36F44C9191B797DAEAFE07AA /* libPods-JohnnyEnglishDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9741F4E2219E501C92409D8B /* libPods-JohnnyEnglishDemo.a */; };
+		AC44F21519E544C600FF4C0A /* CTXSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC44F21419E544C600FF4C0A /* CTXSecondViewController.m */; };
+		AC44F21819E69F9A00FF4C0A /* CTXBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC44F21719E69F9A00FF4C0A /* CTXBaseViewController.m */; };
+		AC44F21B19E7EDCE00FF4C0A /* CTXThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC44F21A19E7EDCE00FF4C0A /* CTXThirdViewController.m */; };
+		AC57AFE319E2EE9600883C1B /* CTXMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC57AFE219E2EE9600883C1B /* CTXMainViewController.m */; };
+		B25C5C9D386F441879833615 /* CTXJohnnyEnglishGoogleAnalyticsConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = B25C5E2D63D1A2E2511E073E /* CTXJohnnyEnglishGoogleAnalyticsConfiguration.m */; };
+		E1EDE6391FEFABE900A5FEF5 /* CTXGATracker.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EDE6301FEFABE900A5FEF5 /* CTXGATracker.m */; };
+		E1EDE63A1FEFABE900A5FEF5 /* CTXUserActivityScreenHit.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EDE6321FEFABE900A5FEF5 /* CTXUserActivityScreenHit.m */; };
+		E1EDE63B1FEFABE900A5FEF5 /* CTXUserActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EDE6331FEFABE900A5FEF5 /* CTXUserActivity.m */; };
+		E1EDE63C1FEFABE900A5FEF5 /* CTXUserActivityTiming.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EDE6341FEFABE900A5FEF5 /* CTXUserActivityTiming.m */; };
+		E1EDE63D1FEFABE900A5FEF5 /* CTXUserActivityTrackingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EDE6351FEFABE900A5FEF5 /* CTXUserActivityTrackingManager.m */; };
+		E1EDE63E1FEFABE900A5FEF5 /* CTXUserActivityEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EDE6371FEFABE900A5FEF5 /* CTXUserActivityEvent.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		073B25DF19B385800005F2FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 073B25B719B385800005F2FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 073B25BE19B385800005F2FC;
+			remoteInfo = JohnnyEnglishDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		073B25BF19B385800005F2FC /* JohnnyEnglishDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JohnnyEnglishDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		073B25C219B385800005F2FC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		073B25C419B385800005F2FC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		073B25C619B385800005F2FC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		073B25CA19B385800005F2FC /* JohnnyEnglishDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JohnnyEnglishDemo-Info.plist"; sourceTree = "<group>"; };
+		073B25CC19B385800005F2FC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		073B25CE19B385800005F2FC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		073B25D019B385800005F2FC /* JohnnyEnglishDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JohnnyEnglishDemo-Prefix.pch"; sourceTree = "<group>"; };
+		073B25D119B385800005F2FC /* CTXAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTXAppDelegate.h; sourceTree = "<group>"; };
+		073B25D219B385800005F2FC /* CTXAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTXAppDelegate.m; sourceTree = "<group>"; };
+		073B25D419B385800005F2FC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		073B25DA19B385800005F2FC /* JohnnyEnglishDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JohnnyEnglishDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		073B25DB19B385800005F2FC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		073B25E319B385800005F2FC /* JohnnyEnglishDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JohnnyEnglishDemoTests-Info.plist"; sourceTree = "<group>"; };
+		073B25E519B385800005F2FC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		073B25E719B385800005F2FC /* JohnnyEnglishDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JohnnyEnglishDemoTests.m; sourceTree = "<group>"; };
+		9741F4E2219E501C92409D8B /* libPods-JohnnyEnglishDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JohnnyEnglishDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC44F21319E544C600FF4C0A /* CTXSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTXSecondViewController.h; sourceTree = "<group>"; };
+		AC44F21419E544C600FF4C0A /* CTXSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTXSecondViewController.m; sourceTree = "<group>"; };
+		AC44F21619E69F9A00FF4C0A /* CTXBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTXBaseViewController.h; sourceTree = "<group>"; };
+		AC44F21719E69F9A00FF4C0A /* CTXBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTXBaseViewController.m; sourceTree = "<group>"; };
+		AC44F21919E7EDCE00FF4C0A /* CTXThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTXThirdViewController.h; sourceTree = "<group>"; };
+		AC44F21A19E7EDCE00FF4C0A /* CTXThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTXThirdViewController.m; sourceTree = "<group>"; };
+		AC57AFE119E2EE9600883C1B /* CTXMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTXMainViewController.h; sourceTree = "<group>"; };
+		AC57AFE219E2EE9600883C1B /* CTXMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTXMainViewController.m; sourceTree = "<group>"; };
+		B25C57F68E0E8CEA11EBD1F1 /* CTXJohnnyEnglishGoogleAnalyticsConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTXJohnnyEnglishGoogleAnalyticsConfiguration.h; sourceTree = "<group>"; };
+		B25C5E2D63D1A2E2511E073E /* CTXJohnnyEnglishGoogleAnalyticsConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTXJohnnyEnglishGoogleAnalyticsConfiguration.m; sourceTree = "<group>"; };
+		C11C383CFC14D3831A903B66 /* Pods-JohnnyEnglishDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JohnnyEnglishDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-JohnnyEnglishDemo/Pods-JohnnyEnglishDemo.release.xcconfig"; sourceTree = "<group>"; };
+		DCFBE796050490D9A593F109 /* Pods-JohnnyEnglishDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JohnnyEnglishDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JohnnyEnglishDemo/Pods-JohnnyEnglishDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		E1EDE6291FEFABE900A5FEF5 /* CTXUserActivityTrackingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTXUserActivityTrackingManager.h; sourceTree = "<group>"; };
+		E1EDE62A1FEFABE900A5FEF5 /* CTXUserActivityTiming.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTXUserActivityTiming.h; sourceTree = "<group>"; };
+		E1EDE62B1FEFABE900A5FEF5 /* CTXUserActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTXUserActivity.h; sourceTree = "<group>"; };
+		E1EDE62C1FEFABE900A5FEF5 /* CTXUserActivityScreenHit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTXUserActivityScreenHit.h; sourceTree = "<group>"; };
+		E1EDE62D1FEFABE900A5FEF5 /* CTXUserActivityEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTXUserActivityEvent.h; sourceTree = "<group>"; };
+		E1EDE6301FEFABE900A5FEF5 /* CTXGATracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTXGATracker.m; sourceTree = "<group>"; };
+		E1EDE6311FEFABE900A5FEF5 /* CTXGATracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTXGATracker.h; sourceTree = "<group>"; };
+		E1EDE6321FEFABE900A5FEF5 /* CTXUserActivityScreenHit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTXUserActivityScreenHit.m; sourceTree = "<group>"; };
+		E1EDE6331FEFABE900A5FEF5 /* CTXUserActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTXUserActivity.m; sourceTree = "<group>"; };
+		E1EDE6341FEFABE900A5FEF5 /* CTXUserActivityTiming.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTXUserActivityTiming.m; sourceTree = "<group>"; };
+		E1EDE6351FEFABE900A5FEF5 /* CTXUserActivityTrackingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTXUserActivityTrackingManager.m; sourceTree = "<group>"; };
+		E1EDE6361FEFABE900A5FEF5 /* CTXUserActivityTrackerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTXUserActivityTrackerProtocol.h; sourceTree = "<group>"; };
+		E1EDE6371FEFABE900A5FEF5 /* CTXUserActivityEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTXUserActivityEvent.m; sourceTree = "<group>"; };
+		E1EDE6381FEFABE900A5FEF5 /* CTXJohnnyEnglish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTXJohnnyEnglish.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		073B25BC19B385800005F2FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				073B25C519B385800005F2FC /* CoreGraphics.framework in Frameworks */,
+				073B25C719B385800005F2FC /* UIKit.framework in Frameworks */,
+				073B25C319B385800005F2FC /* Foundation.framework in Frameworks */,
+				36F44C9191B797DAEAFE07AA /* libPods-JohnnyEnglishDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		073B25D719B385800005F2FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				073B25DC19B385800005F2FC /* XCTest.framework in Frameworks */,
+				073B25DE19B385800005F2FC /* UIKit.framework in Frameworks */,
+				073B25DD19B385800005F2FC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		073B25B619B385800005F2FC = {
+			isa = PBXGroup;
+			children = (
+				E1EDE6281FEFABE900A5FEF5 /* Sources */,
+				073B25C819B385800005F2FC /* JohnnyEnglishDemo */,
+				073B25E119B385800005F2FC /* JohnnyEnglishDemoTests */,
+				073B25C119B385800005F2FC /* Frameworks */,
+				073B25C019B385800005F2FC /* Products */,
+				D8365937B341E3F34DEEF6C6 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		073B25C019B385800005F2FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				073B25BF19B385800005F2FC /* JohnnyEnglishDemo.app */,
+				073B25DA19B385800005F2FC /* JohnnyEnglishDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		073B25C119B385800005F2FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				073B25C219B385800005F2FC /* Foundation.framework */,
+				073B25C419B385800005F2FC /* CoreGraphics.framework */,
+				073B25C619B385800005F2FC /* UIKit.framework */,
+				073B25DB19B385800005F2FC /* XCTest.framework */,
+				9741F4E2219E501C92409D8B /* libPods-JohnnyEnglishDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		073B25C819B385800005F2FC /* JohnnyEnglishDemo */ = {
+			isa = PBXGroup;
+			children = (
+				073B25D119B385800005F2FC /* CTXAppDelegate.h */,
+				073B25D219B385800005F2FC /* CTXAppDelegate.m */,
+				AC57AFE119E2EE9600883C1B /* CTXMainViewController.h */,
+				AC57AFE219E2EE9600883C1B /* CTXMainViewController.m */,
+				AC44F21319E544C600FF4C0A /* CTXSecondViewController.h */,
+				AC44F21419E544C600FF4C0A /* CTXSecondViewController.m */,
+				AC44F21919E7EDCE00FF4C0A /* CTXThirdViewController.h */,
+				AC44F21A19E7EDCE00FF4C0A /* CTXThirdViewController.m */,
+				AC44F21619E69F9A00FF4C0A /* CTXBaseViewController.h */,
+				AC44F21719E69F9A00FF4C0A /* CTXBaseViewController.m */,
+				073B25D419B385800005F2FC /* Images.xcassets */,
+				073B25C919B385800005F2FC /* Supporting Files */,
+				B25C5E2D63D1A2E2511E073E /* CTXJohnnyEnglishGoogleAnalyticsConfiguration.m */,
+				B25C57F68E0E8CEA11EBD1F1 /* CTXJohnnyEnglishGoogleAnalyticsConfiguration.h */,
+			);
+			path = JohnnyEnglishDemo;
+			sourceTree = "<group>";
+		};
+		073B25C919B385800005F2FC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				073B25CA19B385800005F2FC /* JohnnyEnglishDemo-Info.plist */,
+				073B25CB19B385800005F2FC /* InfoPlist.strings */,
+				073B25CE19B385800005F2FC /* main.m */,
+				073B25D019B385800005F2FC /* JohnnyEnglishDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		073B25E119B385800005F2FC /* JohnnyEnglishDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				073B25E719B385800005F2FC /* JohnnyEnglishDemoTests.m */,
+				073B25E219B385800005F2FC /* Supporting Files */,
+			);
+			path = JohnnyEnglishDemoTests;
+			sourceTree = "<group>";
+		};
+		073B25E219B385800005F2FC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				073B25E319B385800005F2FC /* JohnnyEnglishDemoTests-Info.plist */,
+				073B25E419B385800005F2FC /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D8365937B341E3F34DEEF6C6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DCFBE796050490D9A593F109 /* Pods-JohnnyEnglishDemo.debug.xcconfig */,
+				C11C383CFC14D3831A903B66 /* Pods-JohnnyEnglishDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E1EDE6281FEFABE900A5FEF5 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				E1EDE6291FEFABE900A5FEF5 /* CTXUserActivityTrackingManager.h */,
+				E1EDE6351FEFABE900A5FEF5 /* CTXUserActivityTrackingManager.m */,
+				E1EDE62A1FEFABE900A5FEF5 /* CTXUserActivityTiming.h */,
+				E1EDE6341FEFABE900A5FEF5 /* CTXUserActivityTiming.m */,
+				E1EDE62B1FEFABE900A5FEF5 /* CTXUserActivity.h */,
+				E1EDE6331FEFABE900A5FEF5 /* CTXUserActivity.m */,
+				E1EDE62C1FEFABE900A5FEF5 /* CTXUserActivityScreenHit.h */,
+				E1EDE6321FEFABE900A5FEF5 /* CTXUserActivityScreenHit.m */,
+				E1EDE62D1FEFABE900A5FEF5 /* CTXUserActivityEvent.h */,
+				E1EDE6371FEFABE900A5FEF5 /* CTXUserActivityEvent.m */,
+				E1EDE62E1FEFABE900A5FEF5 /* Trackers */,
+				E1EDE6361FEFABE900A5FEF5 /* CTXUserActivityTrackerProtocol.h */,
+				E1EDE6381FEFABE900A5FEF5 /* CTXJohnnyEnglish.h */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		E1EDE62E1FEFABE900A5FEF5 /* Trackers */ = {
+			isa = PBXGroup;
+			children = (
+				E1EDE62F1FEFABE900A5FEF5 /* GoogleAnalytics */,
+			);
+			path = Trackers;
+			sourceTree = "<group>";
+		};
+		E1EDE62F1FEFABE900A5FEF5 /* GoogleAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				E1EDE6301FEFABE900A5FEF5 /* CTXGATracker.m */,
+				E1EDE6311FEFABE900A5FEF5 /* CTXGATracker.h */,
+			);
+			path = GoogleAnalytics;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		073B25BE19B385800005F2FC /* JohnnyEnglishDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 073B25EB19B385800005F2FC /* Build configuration list for PBXNativeTarget "JohnnyEnglishDemo" */;
+			buildPhases = (
+				F149E603C54FCE4079776831 /* [CP] Check Pods Manifest.lock */,
+				073B25BB19B385800005F2FC /* Sources */,
+				073B25BC19B385800005F2FC /* Frameworks */,
+				073B25BD19B385800005F2FC /* Resources */,
+				11B101977C20EB127E045DA1 /* [CP] Embed Pods Frameworks */,
+				9F99D9D1DF56AEACE4C54C50 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JohnnyEnglishDemo;
+			productName = JohnnyEnglishDemo;
+			productReference = 073B25BF19B385800005F2FC /* JohnnyEnglishDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		073B25D919B385800005F2FC /* JohnnyEnglishDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 073B25EE19B385800005F2FC /* Build configuration list for PBXNativeTarget "JohnnyEnglishDemoTests" */;
+			buildPhases = (
+				073B25D619B385800005F2FC /* Sources */,
+				073B25D719B385800005F2FC /* Frameworks */,
+				073B25D819B385800005F2FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				073B25E019B385800005F2FC /* PBXTargetDependency */,
+			);
+			name = JohnnyEnglishDemoTests;
+			productName = JohnnyEnglishDemoTests;
+			productReference = 073B25DA19B385800005F2FC /* JohnnyEnglishDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		073B25B719B385800005F2FC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = CTX;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "EF Education First";
+				TargetAttributes = {
+					073B25D919B385800005F2FC = {
+						TestTargetID = 073B25BE19B385800005F2FC;
+					};
+				};
+			};
+			buildConfigurationList = 073B25BA19B385800005F2FC /* Build configuration list for PBXProject "JohnnyEnglishDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 073B25B619B385800005F2FC;
+			productRefGroup = 073B25C019B385800005F2FC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				073B25BE19B385800005F2FC /* JohnnyEnglishDemo */,
+				073B25D919B385800005F2FC /* JohnnyEnglishDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		073B25BD19B385800005F2FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				073B25CD19B385800005F2FC /* InfoPlist.strings in Resources */,
+				073B25D519B385800005F2FC /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		073B25D819B385800005F2FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				073B25E619B385800005F2FC /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		11B101977C20EB127E045DA1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JohnnyEnglishDemo/Pods-JohnnyEnglishDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F99D9D1DF56AEACE4C54C50 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JohnnyEnglishDemo/Pods-JohnnyEnglishDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F149E603C54FCE4079776831 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		073B25BB19B385800005F2FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC44F21519E544C600FF4C0A /* CTXSecondViewController.m in Sources */,
+				E1EDE63A1FEFABE900A5FEF5 /* CTXUserActivityScreenHit.m in Sources */,
+				073B25D319B385800005F2FC /* CTXAppDelegate.m in Sources */,
+				073B25CF19B385800005F2FC /* main.m in Sources */,
+				E1EDE63C1FEFABE900A5FEF5 /* CTXUserActivityTiming.m in Sources */,
+				AC44F21819E69F9A00FF4C0A /* CTXBaseViewController.m in Sources */,
+				E1EDE6391FEFABE900A5FEF5 /* CTXGATracker.m in Sources */,
+				AC44F21B19E7EDCE00FF4C0A /* CTXThirdViewController.m in Sources */,
+				E1EDE63D1FEFABE900A5FEF5 /* CTXUserActivityTrackingManager.m in Sources */,
+				E1EDE63B1FEFABE900A5FEF5 /* CTXUserActivity.m in Sources */,
+				AC57AFE319E2EE9600883C1B /* CTXMainViewController.m in Sources */,
+				E1EDE63E1FEFABE900A5FEF5 /* CTXUserActivityEvent.m in Sources */,
+				B25C5C9D386F441879833615 /* CTXJohnnyEnglishGoogleAnalyticsConfiguration.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		073B25D619B385800005F2FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				073B25E819B385800005F2FC /* JohnnyEnglishDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		073B25E019B385800005F2FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 073B25BE19B385800005F2FC /* JohnnyEnglishDemo */;
+			targetProxy = 073B25DF19B385800005F2FC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		073B25CB19B385800005F2FC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				073B25CC19B385800005F2FC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		073B25E419B385800005F2FC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				073B25E519B385800005F2FC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		073B25E919B385800005F2FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		073B25EA19B385800005F2FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		073B25EC19B385800005F2FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCFBE796050490D9A593F109 /* Pods-JohnnyEnglishDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JohnnyEnglishDemo/JohnnyEnglishDemo-Prefix.pch";
+				INFOPLIST_FILE = "JohnnyEnglishDemo/JohnnyEnglishDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		073B25ED19B385800005F2FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C11C383CFC14D3831A903B66 /* Pods-JohnnyEnglishDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JohnnyEnglishDemo/JohnnyEnglishDemo-Prefix.pch";
+				INFOPLIST_FILE = "JohnnyEnglishDemo/JohnnyEnglishDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		073B25EF19B385800005F2FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/JohnnyEnglishDemo.app/JohnnyEnglishDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JohnnyEnglishDemo/JohnnyEnglishDemo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "JohnnyEnglishDemoTests/JohnnyEnglishDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		073B25F019B385800005F2FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/JohnnyEnglishDemo.app/JohnnyEnglishDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JohnnyEnglishDemo/JohnnyEnglishDemo-Prefix.pch";
+				INFOPLIST_FILE = "JohnnyEnglishDemoTests/JohnnyEnglishDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		073B25BA19B385800005F2FC /* Build configuration list for PBXProject "JohnnyEnglishDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				073B25E919B385800005F2FC /* Debug */,
+				073B25EA19B385800005F2FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		073B25EB19B385800005F2FC /* Build configuration list for PBXNativeTarget "JohnnyEnglishDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				073B25EC19B385800005F2FC /* Debug */,
+				073B25ED19B385800005F2FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		073B25EE19B385800005F2FC /* Build configuration list for PBXNativeTarget "JohnnyEnglishDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				073B25EF19B385800005F2FC /* Debug */,
+				073B25F019B385800005F2FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 073B25B719B385800005F2FC /* Project object */;
+}
